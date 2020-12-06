@@ -1,0 +1,106 @@
+/* this is 800px to 1000px */
+.container {
+  height: 1140px;
+  margin-top: -100px;
+
+  background-image: url("../../images/triangle1000.svg");
+  background-repeat: no-repeat;
+
+  background-position-x: calc(382 / 1000 * 100%);
+}
+
+.landingTextBox {
+  min-width: 297.28px !important;
+  min-height: 189.49px !important;
+}
+
+@media (max-width: 600px) {
+  .container {
+    height: 920px;
+
+    background-image: url("../../images/mobileTri624.svg");
+    background-repeat: no-repeat;
+    
+    background-position-y: 300px;
+  }
+
+  .landingTextBox {
+
+    min-width: 238.36px !important;
+    min-height: 151.72px !important;
+  }
+  .codeSide {
+    margin-top: 4rem;
+    width: 100%;
+    min-width: 238.36px;
+    max-width: 319px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+  .container {
+    height: 1025px;
+    margin-top: -100px;
+
+    background-image: url("../../images/triangle900.svg");
+    background-repeat: no-repeat;
+
+    background-position-x: calc(467 / 901 * 100%);
+  }
+
+  .landingTextBox {
+    min-width: 268.36px !important;
+    min-height: 170.72px !important;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1300px) {
+  .container {
+    height: 1485px;
+    margin-top: -200px;
+
+    background-image: url("../../images/darkPurple.svg");
+    background-repeat: no-repeat;
+
+    background-position-x: calc(686 / 1300 * 100%);
+  }
+
+  .landingTextBox {
+    min-width: 387.2px !important;
+    min-height: 246.32px !important;
+  }
+}
+
+@media (min-width: 1300px) and (max-width: 1650px) {
+  .container {
+    height: 1955px;
+    margin-top: -300px;
+
+    background-image: url("../../images/triangle1720.svg");
+    background-repeat: no-repeat;
+
+    background-position-x: calc(910 / 1720 * 100%);
+  }
+
+  .landingTextBox {
+    min-width: 513.19px !important;
+    min-height: 326.47px !important;
+  }
+}
+
+@media (min-width: 1650px) {
+  .container {
+    height: 2400px;
+    margin-top: -300px;
+
+    background-image: url("../../images/triangle2115.svg");
+    background-repeat: no-repeat;
+
+    background-position-x: calc(1117 / 2115 * 100%);
+  }
+
+  .landingTextBox {
+    min-width: 630px !important;
+    min-height: 400px !important;
+  }
+}

@@ -1,0 +1,90 @@
+.landingTextBox{
+    min-width: 297.28px !important;
+    
+  }
+  
+  @media (max-width: 600px){
+    
+    
+    .landingTextBox{
+      min-width: 238.36px !important;
+     
+    }
+   
+  
+  }
+  
+  @media (min-width: 600px) and (max-width: 800px){
+    
+    
+    .landingTextBox {
+      min-width: 268.36px !important;
+     
+    }
+    
+  
+  
+  }
+  @media (min-width: 1000px) and (max-width: 1300px){
+    
+    
+    .landingTextBox{
+      min-width: 387.2px !important;
+      
+    }
+  
+  }
+  
+  @media (min-width: 1300px) and (max-width: 1650px){
+    
+    
+    .landingTextBox{
+      min-width: 513.19px !important;
+      
+    }
+  
+  }
+  
+  @media (min-width: 1650px) {
+    
+    
+    .landingTextBox{
+        
+      min-width: 630px !important;
+      
+    }
+  
+  }
+
+  .logo{
+      position: absolute;
+      top: 1rem;
+      left: 2rem;
+  }
+
+  @media(max-width: 730px) and (min-width: 599px){
+      .logo{
+          
+          opacity: .1;
+      }
+  }
+  @media(max-width: 600px){
+    .logo{
+        top: 2rem;
+        
+        
+    }
+}
+
+  .fab{
+    position: fixed !important;
+    top: 2rem;
+    right: 2rem;
+}
+
+.nav{
+    position: absolute !important;
+    top: 0;
+    max-width: 1920px !important;
+
+}

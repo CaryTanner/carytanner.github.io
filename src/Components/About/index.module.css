@@ -1,0 +1,89 @@
+
+
+  .headShot{
+      min-width: 250px;
+      width: 20vw;
+      max-width: 350px;
+      filter: grayscale(1) brightness(1.3);
+      -webkit-filter: grayscale(1) brightness(1.3);
+}
+  
+
+/* this is 800px to 1000px */
+.aboutContainer{
+    margin: -450px 0 80px 0;
+
+}
+  
+  .landingTextBox {
+    
+    min-width: 297.28px !important;
+    min-height: 250px !important;
+  }
+  
+  @media (max-width: 600px) {
+    
+  
+    .landingTextBox {
+   margin-top: 3rem !important;
+      min-width: 238.36px !important;
+      max-width: 319px;
+    }
+    .headShot{
+        margin: 3rem 0;
+    }
+
+    .aboutContainer{
+        margin-top: 0;
+        background-color: rgba(212, 161, 255, .18)
+
+    }
+
+    
+  }
+  
+  @media (min-width: 600px) and (max-width: 800px) {
+    .aboutContainer{
+        margin: -400px 0 80px 0;
+    
+    }
+  
+    .landingTextBox {
+        margin-left: 1rem;
+      min-width: 268.36px !important;
+      
+    }
+  }
+  
+  @media (min-width: 1000px) and (max-width: 1300px) {
+    .aboutContainer{
+        margin: -550px 0 130px 0;
+    }
+  
+    .landingTextBox {
+      min-width: 387.2px !important;
+      
+    }
+  }
+  
+  @media (min-width: 1300px) and (max-width: 1650px) {
+    .aboutContainer{
+        margin: -650px 0 130px 0;
+    }
+    .landingTextBox {
+      min-width: 513.19px !important;
+     
+    }
+  }
+  
+  @media (min-width: 1650px) {
+    .aboutContainer{
+        margin: -850px 0 230px 0;
+    }
+  
+    .landingTextBox {
+      min-width: 630px !important;
+      
+    }
+  }
+  
