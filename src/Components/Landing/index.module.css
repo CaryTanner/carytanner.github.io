@@ -1,17 +1,18 @@
 /* this is 800px to 1000px */
 .container {
-  height: 1140px;
-  margin-top: -100px;
+  height: 697px;
+  
 
-  background-image: url("../../images/triangle1000.svg");
+  background-image: url("../../images/cut1001.svg");
   background-repeat: no-repeat;
 
-  background-position-x: calc(382 / 1000 * 100%);
+  background-position-x: calc(506 / 1001 * 100%);
 }
 
 .landingTextBox {
-  min-width: 297.28px !important;
-  min-height: 189.49px !important;
+  
+  width: 312px !important;
+  
 }
 
 @media (max-width: 600px) {
@@ -25,82 +26,85 @@
   }
 
   .landingTextBox {
-
+    
     min-width: 238.36px !important;
     min-height: 151.72px !important;
   }
   .codeSide {
     margin-top: 4rem;
     width: 100%;
-    min-width: 238.36px;
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain;
+    min-width: 238px;
     max-width: 319px;
   }
 }
 
 @media (min-width: 600px) and (max-width: 800px) {
   .container {
-    height: 1025px;
-    margin-top: -100px;
+    height: 623px;
+   
 
-    background-image: url("../../images/triangle900.svg");
+    background-image: url("../../images/cut850.svg");
     background-repeat: no-repeat;
-
-    background-position-x: calc(467 / 901 * 100%);
+background-position-x: calc(430 / 852 * 100%); 
+   
   }
 
   .landingTextBox {
-    min-width: 268.36px !important;
-    min-height: 170.72px !important;
+    max-width: 266px;
+    
+    
   }
 }
 
-@media (min-width: 1000px) and (max-width: 1300px) {
+@media (min-width: 1001px) and (max-width: 1279px) {
   .container {
-    height: 1485px;
-    margin-top: -200px;
+    height: 768px;
+    
 
-    background-image: url("../../images/darkPurple.svg");
+    background-image: url("../../images/cut1280Stretch.svg");
     background-repeat: no-repeat;
 
-    background-position-x: calc(686 / 1300 * 100%);
+    background-position-x: calc(648 / 1282 * 100%);
   }
 
   .landingTextBox {
-    min-width: 387.2px !important;
-    min-height: 246.32px !important;
+    width: 400px !important;
+    
   }
 }
 
-@media (min-width: 1300px) and (max-width: 1650px) {
+@media (min-width: 1280px) and (max-width: 1650px) {
   .container {
-    height: 1955px;
-    margin-top: -300px;
+    height: 932px;
+    
 
-    background-image: url("../../images/triangle1720.svg");
+    background-image: url("../../images/cut1650Stretch2.svg");
     background-repeat: no-repeat;
 
-    background-position-x: calc(910 / 1720 * 100%);
+    background-position-x: calc(834 / 1652 * 100%);
   }
 
   .landingTextBox {
-    min-width: 513.19px !important;
-    min-height: 326.47px !important;
+    width: 515px !important;
+    
   }
 }
 
 @media (min-width: 1650px) {
   .container {
-    height: 2400px;
-    margin-top: -300px;
+    height: 1060px;
 
-    background-image: url("../../images/triangle2115.svg");
+    background-image: url("../../images/cut1920.svg");
     background-repeat: no-repeat;
 
-    background-position-x: calc(1117 / 2115 * 100%);
+    background-position-x: calc(963 / 1938 * 100%);
   }
 
   .landingTextBox {
-    min-width: 630px !important;
-    min-height: 400px !important;
+    width: 605px !important;
+    
   }
 }
