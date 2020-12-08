@@ -9,7 +9,7 @@ import {
   Fade,
   useMediaQuery
 } from "@material-ui/core";
-import headShot from "../../images/headShot.jpg";
+
 import headShotShort from "../../images/headShotShort.png";
 
 export default function About() {
@@ -41,7 +41,7 @@ export default function About() {
   return (
     <>
       <Grid
-        style={{ padding: "0 2rem 0 2rem" }}
+        
         container
         className={styles.aboutContainer}
       >
@@ -64,7 +64,7 @@ export default function About() {
           >
               <Fade in={scrollTrigger} timeout={1000}>
             <Typography ref={textRef} variant="h4">
-              <Box mb={4} align={isXs ? "center" : "left"}>About Me</Box>
+              <Box color="primary.main" mb={4} align={isXs ? "center" : "left"}>ABOUT ME</Box>
               
             </Typography>
           </Fade>

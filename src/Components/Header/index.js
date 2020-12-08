@@ -111,7 +111,7 @@ function Header() {
                   lineHeight={0.8}
                   letterSpacing={-1}
                   display="inline"
-                  mr={{sm: 1, md: 5 }}
+                  
                 >
                   <LaunchIcon fontSize="inherit" /> CV
                 </Box>
@@ -123,11 +123,11 @@ function Header() {
           <Hidden xsDown>
             <Button
               variant="contained"
-              color={isXs ? "primary" : "secondary"}
-              size={isXs ? "small" : "medium"}
+              color="secondary"
+              
             >
               {" "}
-              contact
+             Contact
             </Button>
           </Hidden>
           <Hidden smUp>

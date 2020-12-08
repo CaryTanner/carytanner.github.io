@@ -17,28 +17,22 @@
 
 @media (max-width: 600px) {
   .container {
-    height: 920px;
+    height: 910px;
 
-    background-image: url("../../images/mobileTri624.svg");
+    background-image: url("../../images/mobileCode_4.svg");
     background-repeat: no-repeat;
-    
-    background-position-y: 300px;
+   background-size: cover;
+   background-position-x: calc(268 / 536 * 100%);
   }
 
   .landingTextBox {
     
-    min-width: 238.36px !important;
-    min-height: 151.72px !important;
+    min-width: 221px !important;
+    
   }
-  .codeSide {
-    margin-top: 4rem;
-    width: 100%;
-    width: 100%; 
-    height: 100%; 
-    object-fit: contain;
-    min-width: 238px;
-    max-width: 319px;
-  }
+  
+
+
 }
 
 @media (min-width: 600px) and (max-width: 800px) {
@@ -61,10 +55,10 @@ background-position-x: calc(430 / 852 * 100%);
 
 @media (min-width: 1001px) and (max-width: 1279px) {
   .container {
-    height: 768px;
+    height: 839px;
     
 
-    background-image: url("../../images/cut1280Stretch.svg");
+    background-image: url("../../images/cut1280_2.svg");
     background-repeat: no-repeat;
 
     background-position-x: calc(648 / 1282 * 100%);
@@ -78,10 +72,10 @@ background-position-x: calc(430 / 852 * 100%);
 
 @media (min-width: 1280px) and (max-width: 1650px) {
   .container {
-    height: 932px;
+    height: 1020px;
     
 
-    background-image: url("../../images/cut1650Stretch2.svg");
+    background-image: url("../../images/cut1650_3_3.svg");
     background-repeat: no-repeat;
 
     background-position-x: calc(834 / 1652 * 100%);
@@ -95,9 +89,9 @@ background-position-x: calc(430 / 852 * 100%);
 
 @media (min-width: 1650px) {
   .container {
-    height: 1060px;
+    height: 1082px;
 
-    background-image: url("../../images/cut1920.svg");
+    background-image: url("../../images/cut1920_2.svg");
     background-repeat: no-repeat;
 
     background-position-x: calc(963 / 1938 * 100%);

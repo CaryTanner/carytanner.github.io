@@ -1,4 +1,23 @@
-.space{
-  height: 1000px;
-  background-color: rgba(212, 161, 255, .18)
+/* .projectsContainer{
+  padding: 0 2rem;
+  
+} */
+
+.projectsContainer img{
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, .15);
+  cursor: pointer;
+  
 }
+
+@media (max-width: 960px){
+  .projectsContainer img{
+    margin: 6rem 0 2rem 0;
+  }
+}
+
+
+
+
+

@@ -16,7 +16,8 @@ let globalTheme = createMuiTheme({
         
     },
     background: {
-        default: "#fff"
+        default: "#fff",
+        paper: '#fff' 
       },
     warning: {
       main: '#ffb7a4' //peach

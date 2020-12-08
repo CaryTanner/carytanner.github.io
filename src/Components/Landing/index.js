@@ -12,7 +12,7 @@ import {
   useScrollTrigger,
   Fade,
 } from "@material-ui/core";
-import codeBoxGroup from "../../images/codeBoxGroup.svg";
+
 
 export default function Landing() {
   const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
@@ -62,7 +62,7 @@ export default function Landing() {
                   fontWeight="fontWeightLight"
                   letterSpacing={-2}
                   my={{ xs: "3rem", sm: "3vw" }}
-                  mr={5}
+                 
                   lineHeight={0.8}
                 >
                   I can help you build a better website.
@@ -91,15 +91,7 @@ export default function Landing() {
             </Hidden>
           </Grid>
 
-          <Hidden smUp>
-            <Grid item>
-              <img
-                src={codeBoxGroup}
-                className={styles.codeSide}
-                alt="Box of sample code"
-              ></img>
-            </Grid>
-          </Hidden>
+          
         </Grid>
       </Grid>
     </>
