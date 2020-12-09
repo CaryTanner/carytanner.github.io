@@ -15,7 +15,7 @@ import {
 
 
 export default function Landing() {
-  const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
+  const isSm = useMediaQuery((theme) => theme.breakpoints.down("sm"));
   const isXs = useMediaQuery((theme) => theme.breakpoints.down("xs"));
   const [fadeIn, setFadeIn] = useState(false);
 
@@ -28,7 +28,7 @@ export default function Landing() {
       <Grid
         container
         className={styles.container}
-        style={{ padding: "0 2rem" }}
+        
       >
         <Grid
           item
@@ -39,7 +39,7 @@ export default function Landing() {
           direction="column"
           alignItems={isXs ? "center" : "flex-end"}
         >
-          <Grid item className={styles.landingTextBox}>
+          <Grid item className={styles.landingTextBox}  direction="column"  container xs={12} sm={9} md={8} >
             <Fade in={fadeIn} timeout={1000}>
               <Typography variant="h3">
                 <Box
@@ -62,7 +62,7 @@ export default function Landing() {
                   fontWeight="fontWeightLight"
                   letterSpacing={-2}
                   my={{ xs: "3rem", sm: "3vw" }}
-                 
+                  mr={2}
                   lineHeight={0.8}
                 >
                   I can help you build a better website.
@@ -75,9 +75,10 @@ export default function Landing() {
               style={{ transitionDelay: fadeIn ? "1800ms" : "0ms" }}
             >
               <Button
-                size={isMobile ? "small" : "medium"}
+                size={isSm ? "small" : "medium"}
                 variant="contained"
                 color="primary"
+                style={{maxWidth: "135px"}}
               >
                 Work with me
               </Button>

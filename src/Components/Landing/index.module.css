@@ -7,13 +7,10 @@
   background-repeat: no-repeat;
 
   background-position-x: calc(506 / 1001 * 100%);
+  overflow-x: hidden !important;
 }
 
-.landingTextBox {
-  
-  width: 312px !important;
-  
-}
+
 
 @media (max-width: 600px) {
   .container {
@@ -27,7 +24,7 @@
 
   .landingTextBox {
     
-    min-width: 221px !important;
+    max-width: 298px !important;
     
   }
   
@@ -46,11 +43,7 @@ background-position-x: calc(430 / 852 * 100%);
    
   }
 
-  .landingTextBox {
-    max-width: 266px;
-    
-    
-  }
+  
 }
 
 @media (min-width: 1001px) and (max-width: 1279px) {
@@ -64,10 +57,7 @@ background-position-x: calc(430 / 852 * 100%);
     background-position-x: calc(648 / 1282 * 100%);
   }
 
-  .landingTextBox {
-    width: 400px !important;
-    
-  }
+  
 }
 
 @media (min-width: 1280px) and (max-width: 1650px) {
@@ -81,10 +71,7 @@ background-position-x: calc(430 / 852 * 100%);
     background-position-x: calc(834 / 1652 * 100%);
   }
 
-  .landingTextBox {
-    width: 515px !important;
-    
-  }
+ 
 }
 
 @media (min-width: 1650px) {
@@ -97,8 +84,5 @@ background-position-x: calc(430 / 852 * 100%);
     background-position-x: calc(963 / 1938 * 100%);
   }
 
-  .landingTextBox {
-    width: 605px !important;
-    
-  }
+  
 }

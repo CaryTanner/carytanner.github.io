@@ -14,6 +14,7 @@ import {
   Grow,
   Menu,
   MenuItem,
+  useTheme
 } from "@material-ui/core";
 
 import MenuIcon from "@material-ui/icons/Menu";
@@ -23,6 +24,8 @@ import LaunchIcon from "@material-ui/icons/Launch";
 function Header() {
   const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 200 });
   const isXs = useMediaQuery((theme) => theme.breakpoints.down("xs"));
+
+  
 
   //hamburger logic
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -46,6 +49,8 @@ function Header() {
     fontSize: "30px",
   };
 
+  
+
   return (
     <>
       <Box {...logoProps} className={styles.logo}>
@@ -53,11 +58,7 @@ function Header() {
         <Box style={{ transform: "rotate(180deg) translateX(-2px)" }}>NER</Box>
       </Box>
 
-      <Grid
-        style={{ padding: "2rem 2rem 0 2rem" }}
-        container
-        className={styles.nav}
-      >
+      <Grid style={{ padding: "2rem 0 0 0" }} container className={styles.nav}>
         <Grid
           item
           xs={12}
@@ -70,7 +71,8 @@ function Header() {
           <Hidden xsDown>
             <Grid
               item
-              sm={6}
+              sm={9}
+              md={8}
               className={styles.landingTextBox}
               container
               justify="space-between"
@@ -111,7 +113,7 @@ function Header() {
                   lineHeight={0.8}
                   letterSpacing={-1}
                   display="inline"
-                  
+                  mr={2}
                 >
                   <LaunchIcon fontSize="inherit" /> CV
                 </Box>
@@ -119,24 +121,25 @@ function Header() {
             </Grid>
           </Hidden>
         </Grid>
-        <Grid item sm={6} container justify="flex-end">
-          <Hidden xsDown>
-            <Button
-              variant="contained"
-              color="secondary"
-              
-            >
+        <Grid item sm={6} xs={11} container justify="flex-end" alignItems="flex-start" >
+        <Hidden xsDown >
+            <Button variant="contained" color="secondary" className={styles.rightMenu}>
               {" "}
-             Contact
+              Contact
             </Button>
           </Hidden>
           <Hidden smUp>
-            <Button variant="outlined" onClick={handleClick}>
-              <MenuIcon />
+            <Button   onClick={handleClick}>
+              <MenuIcon  fontSize="large"/>
             </Button>
-          </Hidden>
+        </Hidden>
         </Grid>
       </Grid>
+        
+
+
+
+
       <Grow in={trigger}>
         <Fab className={styles.fab} color="primary" onClick={handleClick}>
           <MenuIcon />

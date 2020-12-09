@@ -1,61 +1,13 @@
-/* this is 800px to 1000px */
-.landingTextBox{
-    min-width: 312px !important;
-    
-  }
-  
+
   @media (max-width: 600px){
     
     
-    .landingTextBox{
-      min-width: 238.36px !important;
-     
-    }
-   
-  
-  }
-  
-  @media (min-width: 600px) and (max-width: 800px){
-    
-    
     .landingTextBox {
-      min-width: 266px !important;
-     
-    }
     
-  
-  
-  }
-  @media (min-width: 1001px) and (max-width: 1279px){
-    
-    
-    .landingTextBox{
-      min-width: 400px !important;
-      
-    }
-  
-  }
-  
-  @media (min-width: 1280px) and (max-width: 1650px){
-    
-    
-    .landingTextBox{
-      min-width: 515px !important;
-      
-    }
-  
-  }
-  
-  @media (min-width: 1650px) {
-    
-    
-    .landingTextBox{
+        max-width: 298px !important;
         
-      min-width: 605px !important;
-      
+      }
     }
-  
-  }
 
   .logo{
       position: absolute;
@@ -63,7 +15,7 @@
       left: 2rem;
   }
 
-  @media(max-width: 730px) and (min-width: 599px){
+  @media(max-width: 740px) and (min-width: 599px){
       .logo{
           
           opacity: .1;
@@ -76,6 +28,12 @@
         
         
     }
+} 
+
+
+
+.rightMenu{
+    margin-right: 2rem !important;
 }
 
   .fab{
@@ -89,5 +47,5 @@
     position: absolute !important;
     top: 0;
     max-width: 1920px !important;
-
+    overflow-x: hidden !important;
 }

@@ -4,6 +4,7 @@ import Header  from './Components/Header'
 import Landing from './Components/Landing'
 import Projects from './Components/Projects'
 import About from './Components/About'
+import Contact from './Components/Contact'
 import {Container} from '@material-ui/core'
 
 
@@ -19,6 +20,7 @@ function App() {
     <Landing />
     <About />
     <Projects />
+    <Contact />
     </Container>
       
       

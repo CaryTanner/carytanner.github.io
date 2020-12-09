@@ -19,6 +19,7 @@ import rainingMobile from "../../images/rainingMobile.jpg";
 
 import rainingGif from "../../images/rainingGif.gif";
 import rainingGif_2 from "../../images/rainingGif_2.gif";
+import powellsSmallTomato from "../../images/powellsSmallTomato.gif"
 
 export default function Projects() {
   const isXs = useMediaQuery((theme) => theme.breakpoints.down("xs"));
@@ -29,44 +30,49 @@ export default function Projects() {
     threshold: 500,
     disableHysteresis: true,
   });
-  console.log(scrollTrigger);
-  const [rainingImgSrc, setRainingImgSrc] = useState(rainingDesktop);
-  const [powellsImgSrc, setPowellsImgSrc] = useState(powellsDesktop);
-  const [cellarImgSrc, setCellarImgSrc] = useState(cellarDesktop);
+  
+  const [rainingImgSrc, setRainingImgSrc] = useState(undefined);
+  const [powellsImgSrc, setPowellsImgSrc] = useState(undefined);
+  const [cellarImgSrc, setCellarImgSrc] = useState(undefined);
 
   useEffect(() => {
     if (scrollTrigger) {
       setRainingImgSrc(rainingGif_2);
-      setPowellsImgSrc(rainingGif_2);
+      setPowellsImgSrc(powellsSmallTomato);
       setCellarImgSrc(rainingGif);
     }
   }, [scrollTrigger]);
 
   const gridSections = {
     xs: 10,
-    sm: 8,
-    md: 5,
-    lg: 5,
-    xl: 4
+    sm: 9,
+    md: 4,
+   
   }
 
   const projectGroup = {
     
     justify: "center",
     alignItems: "center",
-    spacing: isSm ? 0 : 5  
+    
+    overflow: "hidden"
+     
   }
   const btnProps = {
-    variant: "contained",
+    variant: "outlined",
     color: "primary",
     size: isMd ? "small" : "medium"
   }
   const justifyStart = {
-    justify: isSm ? "center" : "flex-start"
+    justify: isSm ? "center" : "flex-start",
+   
+    
+    
   }
 
   const justifyEnd = {
-    justify: isSm ? "center" : "flex-end"
+    justify: isSm ? "center" : "flex-end",
+    
   }
 
   return (
@@ -77,11 +83,12 @@ export default function Projects() {
         justify="center"
         alignItems="center"
         className={styles.projectsContainer}
-        spacing={isSm ? 0 : 10}
+        
+        
       >
-        <Grid item xs={12}>
+        <Grid item xs={12} >
           <Typography variant="h3">
-            <Box mt={9} color="primary.main">
+            <Box my={isXs ? 2 : 7} color="primary.dark" >
               PROJECTS
             </Box>
           </Typography>
@@ -91,7 +98,7 @@ export default function Projects() {
           item
           container
           {...projectGroup}
-          
+          className={styles.projectGroup}
         >
           <Grid
             item
@@ -99,7 +106,7 @@ export default function Projects() {
             {...gridSections}
             container
             {...justifyEnd}
-            
+            style={{marginRight: isSm ? "0px" : "20px"}}
           >
             
               
@@ -117,9 +124,10 @@ export default function Projects() {
             className={styles.wordGrid}
             container
             {...justifyStart}
+           style={{ marginLeft: isSm ? "0px" : "20px"}}
           >
             <Typography variant="h4">
-              <Box my={1} color="primary.main" letterSpacing={-1}>
+              <Box mb={1} color="primary.dark" letterSpacing={-1}>
                 Raining Cats &amp; Dogs
               </Box>
             </Typography>
@@ -151,6 +159,7 @@ export default function Projects() {
           container
           {...projectGroup}
           direction={ isSm ? "column-reverse" : "row"}
+          className={styles.projectGroup}
         >
           <Grid
             item
@@ -158,9 +167,10 @@ export default function Projects() {
             className={styles.wordGrid}
             container
             {...justifyEnd}
+            style={{marginRight: isSm ? "0px" : "20px"}}
           >
             <Typography variant="h4">
-              <Box my={1} color="primary.main" letterSpacing={-1}>
+              <Box mb={1} color="primary.dark" letterSpacing={-1}>
                 Powell's Produce
               </Box>
             </Typography>
@@ -192,6 +202,7 @@ export default function Projects() {
             
             container
             {...justifyStart}
+            style={{ marginLeft: isSm ? "0px" : "20px"}}
           >
             
               <img
@@ -205,12 +216,14 @@ export default function Projects() {
           item
           container
           {...projectGroup}
+          className={styles.projectGroup}
         >
           <Grid
             item
             {...gridSections}
             container
             {...justifyEnd}
+            style={{marginRight: isSm ? "0px" : "20px"}}
           >
            
               <img
@@ -227,9 +240,10 @@ export default function Projects() {
             className={styles.wordGrid}
             container
             {...justifyStart}
+            style={{ marginLeft: isSm ? "0px" : "20px"}}
           >
             <Typography variant="h4">
-              <Box my={1} color="primary.main" letterSpacing={-1}>
+              <Box mb={1} color="primary.dark" letterSpacing={-1}>
                 Cellar Stock
               </Box>
             </Typography>
@@ -257,6 +271,7 @@ export default function Projects() {
           </Grid>
         </Grid>
       </Grid>
+      <Box className={styles.triangle}></Box>
     </>
   );
 }

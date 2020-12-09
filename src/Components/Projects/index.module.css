@@ -1,21 +1,37 @@
-/* .projectsContainer{
-  padding: 0 2rem;
-  
-} */
+
 
 .projectsContainer img{
   width: 100%;
-  max-width: 600px;
+  max-width: 720px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, .15);
-  cursor: pointer;
   
+  
+  
+}
+.projectGroup{
+  margin: 2rem 0 !important;
 }
 
 @media (max-width: 960px){
   .projectsContainer img{
-    margin: 6rem 0 2rem 0;
+    margin: 4rem 0 3rem 0;
   }
 }
+
+/* .triangle {
+  
+  width: 0;
+  
+  height: 0;
+  border-top: 28vw solid white;
+  border-left: 50vw solid rgba(212, 161, 255, 18%);;
+  border-right: 50vw solid rgba(212, 161, 255, 18%);;
+  
+  
+} */
+
+
+
 
 
 
