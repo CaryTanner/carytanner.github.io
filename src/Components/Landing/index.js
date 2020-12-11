@@ -64,9 +64,9 @@ export default function Landing({emailOpen, openContactForm}) {
                   letterSpacing={-2}
                   my={{ xs: "3rem", sm: "3vw" }}
                   mr={2}
-                  lineHeight={0.8}
+                  lineHeight={0.9}
                 >
-                  I can help you build a better website.
+                  I build web apps with clean, robust code 
                 </Box>
               </Typography>
             </Fade>

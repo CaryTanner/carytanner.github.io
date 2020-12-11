@@ -61,7 +61,7 @@ export default function Projects() {
   const btnProps = {
     variant: "outlined",
     color: "primary",
-    size: isMd ? "small" : "medium"
+    
   }
   const justifyStart = {
     justify: isSm ? "center" : "flex-start",

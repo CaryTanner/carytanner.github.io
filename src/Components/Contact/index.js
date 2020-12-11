@@ -1,5 +1,5 @@
 import { StylesProvider } from "@material-ui/core";
-import React from "react";
+import React, {useState, useEffect} from "react";
 import styles from "./index.module.css";
 import {
   Grid,
@@ -9,14 +9,42 @@ import {
   Button,
   Hidden,
   Link,
+  Grow,
+  Fade
 } from "@material-ui/core";
 import LaunchIcon from "@material-ui/icons/Launch";
-import CV_Cary_Tanner_Web_Developer_December_2020 from "../../images/CV_Cary_Tanner_Web_Developer_December_2020.pdf";
+import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
+import CV_Cary_Tanner_Web_Developer from "../../images/CV_Cary_Tanner_Web_Developer.pdf";
 
 export default function Contact({ emailOpen, openContactForm }) {
   const isXs = useMediaQuery((theme) => theme.breakpoints.down("xs"));
   const isSm = useMediaQuery((theme) => theme.breakpoints.down("sm"));
   const isMd = useMediaQuery((theme) => theme.breakpoints.down("md"));
+
+  const textRef = React.createRef();
+  const [scrollTrigger, setScrollTrigger] = useState(undefined);
+  
+  let options = {
+    rootMargin: "0px",
+    threshold: 1.0,
+  };
+
+  useEffect(() => {
+    const scrollObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setScrollTrigger(true);
+        }
+      },
+
+      options
+    );
+
+    if (textRef) {
+      scrollObserver.observe(textRef.current);
+    }
+  }, []);
+
 
   const gridSections = {
     xs: 10,
@@ -56,40 +84,43 @@ export default function Contact({ emailOpen, openContactForm }) {
           <Grid
             item
             xs={10}
-            sm={8}
-            md={10}
+            sm={7}
+            md={9}
             style={{ marginLeft: isSm ? "0px" : "-20px" }}
           >
-            <Typography variant="h4">
+              
+            <Typography variant={isXs ? "h3" : "h4"}>
+            
               <Box
-                color="primary.main"
+                color="primary.dark"
                 fontWeight="fontWeightMedium"
                 letterSpacing={-1}
                 align={isXs ? "center" : "left"}
+                ref={textRef}
               >
-                Want to hire an ambitious web developer?
+                Looking to hire an ambitious web developer?
               </Box>
+              
             </Typography>
-            <Typography variant="h5">
-              <Box my={isXs ? 2 : 1} align={isXs ? "center" : "left"}>
-                Let's get in touch!
-              </Box>
-            </Typography>
+            
+           
           </Grid>
           <Grid
             item
             style={{
               marginRight: isSm ? "0px" : "-20px",
-              marginTop: isXs ? "1rem" : "0px",
+              marginTop: isXs ? "2rem" : "0px",
             }}
           >
+              <Grow in={scrollTrigger} timeout={1200} style={{ transitionDelay: scrollTrigger ? "500ms" : "0ms" }} >
             <Button
               variant="contained"
               color="primary"
               onClick={openContactForm}
-            >
-              Work with me
+              size="large"
+            ><ArrowRightAltIcon/> &nbsp;&nbsp; Work with me
             </Button>
+            </Grow>
           </Grid>
         </Grid>
 
@@ -125,7 +156,7 @@ export default function Contact({ emailOpen, openContactForm }) {
               </Box>
             </Typography>
             <Hidden only="sm">
-              <Typography variant="subtitle1">
+              <Typography variant="body1">
                 <Box
                   ml={isXs ? 0 : 2}
                   mt={isXs ? 1 : 0}
@@ -176,10 +207,10 @@ export default function Contact({ emailOpen, openContactForm }) {
                 target="_blank"
                 color="textPrimary"
                 underline="none"
-                href={CV_Cary_Tanner_Web_Developer_December_2020}
+                href={CV_Cary_Tanner_Web_Developer}
               >
                 <Box className="linkStyles" display="inline">
-                  {" "}
+                  
                   <LaunchIcon fontSize="inherit" /> CV
                 </Box>
               </Link>

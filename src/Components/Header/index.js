@@ -18,7 +18,7 @@ import {
 import MenuIcon from "@material-ui/icons/Menu";
 import styles from "./index.module.css";
 import LaunchIcon from "@material-ui/icons/Launch";
-import CV_Cary_Tanner_Web_Developer_December_2020 from "../../images/CV_Cary_Tanner_Web_Developer_December_2020.pdf";
+import CV_Cary_Tanner_Web_Developer from "../../images/CV_Cary_Tanner_Web_Developer.pdf";
 
 function Header({openContactForm}) {
   const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 200 });
@@ -137,7 +137,7 @@ function Header({openContactForm}) {
                     target="_blank"
                     color="textPrimary"
                     underline="none"
-                    href={CV_Cary_Tanner_Web_Developer_December_2020}
+                    href={CV_Cary_Tanner_Web_Developer}
                   >
                     <LaunchIcon fontSize="inherit" /> CV
                   </Link>
@@ -221,7 +221,7 @@ function Header({openContactForm}) {
             target="_blank"
             color="textPrimary"
             underline="none"
-            href={CV_Cary_Tanner_Web_Developer_December_2020}
+            href={CV_Cary_Tanner_Web_Developer}
           >
             <LaunchIcon fontSize="inherit" /> CV
           </Link>
