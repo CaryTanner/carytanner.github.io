@@ -78,6 +78,7 @@ export default function Projects() {
   return (
     <>
       <Grid
+      id="projectsSection"
         container
         direction="column"
         justify="center"
@@ -88,7 +89,7 @@ export default function Projects() {
       >
         <Grid item xs={12} >
           <Typography variant="h3">
-            <Box my={isXs ? 2 : 7} color="primary.dark" >
+            <Box mt={isXs ? 2 : 8} mb={isXs ? 2 : 4}  color="primary.main" >
               PROJECTS
             </Box>
           </Typography>
@@ -132,9 +133,9 @@ export default function Projects() {
               </Box>
             </Typography>
             <Typography variant="body1">
-              <Box mt={1} mb={4} fontFamliy="Robot slab" align="justify">
+              <Box mt={1} mb={4} fontFamily="Roboto Slab" align="justify">
                 Some explaination - Users might have specified a preference for
-                a light or dark theme. The method by which the user expresses
+                a light or main theme. The method by which the user expresses
                 their preference can vary. It might be a system-wide setting
                 exposed by the Operating System, or a setting controlled by the
                 User Agent.
@@ -142,12 +143,12 @@ export default function Projects() {
             </Typography>
             <Grid container {...justifyStart} spacing={3}>
               <Grid item> 
-              <Button {...btnProps}>
+              <Button {...btnProps} href="https://serene-ravine-80856.herokuapp.com/">
               visit site
             </Button>
             </Grid>
             <Grid item>
-            <Button {...btnProps}>
+            <Button {...btnProps} href="https://github.com/CaryTanner/raining-cats-dogs">
               GitHub Code
             </Button>
             </Grid>
@@ -175,9 +176,9 @@ export default function Projects() {
               </Box>
             </Typography>
             <Typography variant="body1">
-              <Box mt={1} mb={4} fontFamliy="Robot slab" align="justify">
+              <Box mt={1} mb={4} fontFamily="Roboto Slab" align="justify">
                 Some explaination - Users might have specified a preference for
-                a light or dark theme. The method by which the user expresses
+                a light or main theme. The method by which the user expresses
                 their preference can vary. It might be a system-wide setting
                 exposed by the Operating System, or a setting controlled by the
                 User Agent.
@@ -185,12 +186,12 @@ export default function Projects() {
             </Typography>
             <Grid container {...justifyEnd} spacing={3}>
               <Grid item> 
-              <Button {...btnProps}>
+              <Button {...btnProps} href="https://powells-produce.herokuapp.com">
               visit site
             </Button>
             </Grid>
             <Grid item>
-            <Button {...btnProps}>
+            <Button {...btnProps} href="https://github.com/CaryTanner/powells-produce">
               GitHub Code
             </Button>
             </Grid>
@@ -248,9 +249,9 @@ export default function Projects() {
               </Box>
             </Typography>
             <Typography variant="body1">
-              <Box mt={1} mb={4} fontFamliy="Robot slab" align="justify">
+              <Box mt={1} mb={4} fontFamily="Roboto Slab" align="justify">
                 Some explaination - Users might have specified a preference for
-                a light or dark theme. The method by which the user expresses
+                a light or main theme. The method by which the user expresses
                 their preference can vary. It might be a system-wide setting
                 exposed by the Operating System, or a setting controlled by the
                 User Agent.
@@ -258,12 +259,12 @@ export default function Projects() {
             </Typography>
             <Grid container {...justifyStart} spacing={3}>
               <Grid item> 
-              <Button {...btnProps}>
+              <Button {...btnProps} href="https://cellar-stock.herokuapp.com/catalog">
               Visit Site
             </Button>
             </Grid>
             <Grid item>
-            <Button {...btnProps}>
+            <Button {...btnProps} href="https://github.com/CaryTanner/cellar-stock">
               Github code
             </Button>
             </Grid>

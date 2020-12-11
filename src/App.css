@@ -4,3 +4,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
 
 
+body{
+    scroll-behavior: smooth;
+}
+
+.linkStyles{
+    cursor: pointer;
+    transition: all 400ms;
+    -webkit-transition: all 400ms;
+    -moz-transition: all 400ms;
+    -ms-transition: all 400ms;
+    -o-transition: all 400ms;
+    border-bottom: rgba(255, 255, 255, 0) 2px solid;
+}
+
+
+
+
+.linkStyles:hover {
+    color: #000;
+    padding-bottom: 5px;
+    border-bottom: #7a04dd 2px solid;
+    
+    
+}

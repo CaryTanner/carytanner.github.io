@@ -5,8 +5,6 @@ import {
   Typography,
   Box,
   useScrollTrigger,
-  makeStyles,
-  Container,
   Grid,
   useMediaQuery,
   Hidden,
@@ -14,18 +12,17 @@ import {
   Grow,
   Menu,
   MenuItem,
-  useTheme
+  Link,
 } from "@material-ui/core";
 
 import MenuIcon from "@material-ui/icons/Menu";
 import styles from "./index.module.css";
 import LaunchIcon from "@material-ui/icons/Launch";
+import CV_Cary_Tanner_Web_Developer_December_2020 from "../../images/CV_Cary_Tanner_Web_Developer_December_2020.pdf";
 
-function Header() {
+function Header({openContactForm}) {
   const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 200 });
   const isXs = useMediaQuery((theme) => theme.breakpoints.down("xs"));
-
-  
 
   //hamburger logic
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -49,7 +46,27 @@ function Header() {
     fontSize: "30px",
   };
 
-  
+  const boxStyles = {
+    color: "palette.text.primary",
+    fontWeight: "fontWeightMedium",
+    lineHeight: 0.8,
+
+    display: "inline",
+  };
+
+  // link scroll
+
+  const smoothScroll = (event) => {
+    event.preventDefault();
+    const offset = 100;
+    const id = event.currentTarget.getAttribute("href").slice(1);
+    const anchor = document.getElementById(id);
+    const offsetTop = anchor.getBoundingClientRect().top + window.pageYOffset;
+    window.scroll({
+      top: offsetTop - offset,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <>
@@ -68,7 +85,7 @@ function Header() {
           justify="center"
           alignItems="flex-end"
         >
-          <Hidden xsDown>
+          <Hidden smDown>
             <Grid
               item
               sm={9}
@@ -81,64 +98,81 @@ function Header() {
                 <Box
                   fontWeight="fontWeightBold"
                   lineHeight={0.8}
-                  letterSpacing={-1}
                   display="inline"
+                  className="linkStyles"
                 >
                   START
                 </Box>
               </Typography>
               <Typography variant="body1">
-                <Box
-                  fontWeight="fontWeightMedium"
-                  lineHeight={0.8}
-                  letterSpacing={-1}
-                  display="inline"
-                >
-                  ABOUT
+                <Box {...boxStyles}>
+                  <Link
+                    className="linkStyles"
+                    color="textPrimary"
+                    underline="none"
+                    href="#aboutSection"
+                    onClick={smoothScroll}
+                  >
+                    ABOUT
+                  </Link>
                 </Box>
               </Typography>
               <Typography variant="body1">
-                <Box
-                  fontWeight="fontWeightMedium"
-                  lineHeight={0.8}
-                  letterSpacing={-1}
-                  display="inline"
-                >
-                  PROJECTS
+                <Box {...boxStyles}>
+                  <Link
+                    className="linkStyles"
+                    color="textPrimary"
+                    underline="none"
+                    href="#projectsSection"
+                    onClick={smoothScroll}
+                  >
+                    PROJECTS
+                  </Link>
                 </Box>
               </Typography>
               <Typography variant="body1">
-                <Box
-                  fontWeight="fontWeightMedium"
-                  lineHeight={0.8}
-                  letterSpacing={-1}
-                  display="inline"
-                  mr={2}
-                >
-                  <LaunchIcon fontSize="inherit" /> CV
+                <Box {...boxStyles} mr={2}>
+                  <Link
+                    className="linkStyles"
+                    target="_blank"
+                    color="textPrimary"
+                    underline="none"
+                    href={CV_Cary_Tanner_Web_Developer_December_2020}
+                  >
+                    <LaunchIcon fontSize="inherit" /> CV
+                  </Link>
                 </Box>
               </Typography>
             </Grid>
           </Hidden>
         </Grid>
-        <Grid item sm={6} xs={11} container justify="flex-end" alignItems="flex-start" >
-        <Hidden xsDown >
-            <Button variant="contained" color="secondary" className={styles.rightMenu}>
+        <Grid
+          item
+          sm={6}
+          xs={11}
+          container
+          justify="flex-end"
+          alignItems="flex-start"
+        >
+          <Hidden smDown>
+            <Button
+              variant="contained"
+              
+              className={styles.rightMenu}
+              onClick={openContactForm}
+              
+            >
               {" "}
               Contact
             </Button>
           </Hidden>
-          <Hidden smUp>
-            <Button   onClick={handleClick}>
-              <MenuIcon  fontSize="large"/>
+          <Hidden mdUp>
+            <Button onClick={handleClick}>
+              <MenuIcon fontSize="large" />
             </Button>
-        </Hidden>
+          </Hidden>
         </Grid>
       </Grid>
-        
-
-
-
 
       <Grow in={trigger}>
         <Fab className={styles.fab} color="primary" onClick={handleClick}>
@@ -152,15 +186,48 @@ function Header() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}>Start</MenuItem>
-        <MenuItem onClick={handleClose}>About</MenuItem>
-        <MenuItem onClick={handleClose}>Projects</MenuItem>
         <MenuItem onClick={handleClose}>
-          <LaunchIcon fontSize="inherit" />
-          &nbsp;CV
+          <Link
+            color="textPrimary"
+            underline="none"
+            onClick={smoothScroll}
+            href="#startSection"
+          >
+            Start
+          </Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <Button variant="outlined" color="primary">
+          <Link
+            color="textPrimary"
+            underline="none"
+            href="#aboutSection"
+            onClick={smoothScroll}
+          >
+            About
+          </Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link
+            color="textPrimary"
+            underline="none"
+            href="#projectsSection"
+            onClick={smoothScroll}
+          >
+            Projects
+          </Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link
+            target="_blank"
+            color="textPrimary"
+            underline="none"
+            href={CV_Cary_Tanner_Web_Developer_December_2020}
+          >
+            <LaunchIcon fontSize="inherit" /> CV
+          </Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Button variant="outlined" color="primary" onClick={openContactForm}>
             Contact
           </Button>
         </MenuItem>

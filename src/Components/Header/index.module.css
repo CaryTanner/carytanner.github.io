@@ -15,12 +15,6 @@
       left: 2rem;
   }
 
-  @media(max-width: 740px) and (min-width: 599px){
-      .logo{
-          
-          opacity: .1;
-      }
-  }
   @media(max-width: 600px){
     .logo{
         top: 1.5rem;

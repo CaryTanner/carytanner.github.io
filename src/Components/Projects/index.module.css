@@ -9,26 +9,16 @@
   
 }
 .projectGroup{
-  margin: 2rem 0 !important;
+  margin: 4rem 0 !important;
 }
 
 @media (max-width: 960px){
   .projectsContainer img{
-    margin: 4rem 0 3rem 0;
+    margin: 2rem 0 2rem 0;
   }
 }
 
-/* .triangle {
-  
-  width: 0;
-  
-  height: 0;
-  border-top: 28vw solid white;
-  border-left: 50vw solid rgba(212, 161, 255, 18%);;
-  border-right: 50vw solid rgba(212, 161, 255, 18%);;
-  
-  
-} */
+
 
 
 

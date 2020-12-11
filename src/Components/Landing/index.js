@@ -11,10 +11,11 @@ import {
   useMediaQuery,
   useScrollTrigger,
   Fade,
+  Link
 } from "@material-ui/core";
 
 
-export default function Landing() {
+export default function Landing({emailOpen, openContactForm}) {
   const isSm = useMediaQuery((theme) => theme.breakpoints.down("sm"));
   const isXs = useMediaQuery((theme) => theme.breakpoints.down("xs"));
   const [fadeIn, setFadeIn] = useState(false);
@@ -28,7 +29,7 @@ export default function Landing() {
       <Grid
         container
         className={styles.container}
-        
+        id="startSection"
       >
         <Grid
           item
@@ -79,22 +80,27 @@ export default function Landing() {
                 variant="contained"
                 color="primary"
                 style={{maxWidth: "135px"}}
+                onClick={openContactForm}
               >
                 Work with me
               </Button>
             </Fade>
             <Hidden xsDown>
-              <Typography variant="subtitle2" style={{marginTop: "200px"}}>
-                <Box display="inline" mr={3}>GitHub</Box>
-                <Box display="inline" mr={3}>LinkedIn</Box>
-                <Box display="inline">Email</Box>
+              <Typography variant="body1" style={{marginTop: "25vmin"}} >
+              <Link href="https://github.com/CaryTanner"  color="textPrimary" underline="none"><Box className="linkStyles" display="inline"  mr={3}>GITHUB</Box></Link>
+              <Link   href="https://www.linkedin.com/in/carytanner/"  color="textPrimary" underline="none"><Box className="linkStyles"  display="inline"  mr={3}>LINKEDIN</Box></Link>
+              <Box className="linkStyles"  display="inline" onClick={emailOpen} >EMAIL</Box>
+                
+                
               </Typography>
             </Hidden>
+            
           </Grid>
 
           
         </Grid>
       </Grid>
+      <div id="aboutSection"></div>
     </>
   );
 }
