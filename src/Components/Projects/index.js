@@ -10,16 +10,16 @@ import {
   Button,
   useScrollTrigger,
 } from "@material-ui/core";
-import cellarMobile from "../../images/cellarMobile.jpg";
+import LaunchIcon from "@material-ui/icons/Launch";
+
+
 import cellarDesktop from "../../images/cellarDesktop.jpg";
 import powellsDesktop from "../../images/powellsDesktop.jpg";
-import powellsMobile from "../../images/powellsMobile.jpg";
-import rainingDesktop from "../../images/rainingDesktop.jpg";
-import rainingMobile from "../../images/rainingMobile.jpg";
 
-import rainingGif from "../../images/rainingGif.gif";
+import rainingDesktop from "../../images/rainingDesktop.jpg";
 import rainingGif_2 from "../../images/rainingGif_2.gif";
-import powellsSmallTomato from "../../images/powellsSmallTomato.gif"
+import cellarGif from "../../images/cellarGif.gif";
+import powellsGif_2 from "../../images/powellsGif_2.gif"
 
 export default function Projects() {
   const isXs = useMediaQuery((theme) => theme.breakpoints.down("xs"));
@@ -31,15 +31,15 @@ export default function Projects() {
     disableHysteresis: true,
   });
   
-  const [rainingImgSrc, setRainingImgSrc] = useState(undefined);
-  const [powellsImgSrc, setPowellsImgSrc] = useState(undefined);
-  const [cellarImgSrc, setCellarImgSrc] = useState(undefined);
+  const [rainingImgSrc, setRainingImgSrc] = useState(rainingDesktop);
+  const [powellsImgSrc, setPowellsImgSrc] = useState(powellsDesktop);
+  const [cellarImgSrc, setCellarImgSrc] = useState(cellarDesktop);
 
   useEffect(() => {
     if (scrollTrigger) {
       setRainingImgSrc(rainingGif_2);
-      setPowellsImgSrc(powellsSmallTomato);
-      setCellarImgSrc(rainingGif);
+      setPowellsImgSrc(powellsGif_2);
+      setCellarImgSrc(cellarGif);
     }
   }, [scrollTrigger]);
 
@@ -143,8 +143,8 @@ export default function Projects() {
             </Typography>
             <Grid container {...justifyStart} spacing={3}>
               <Grid item> 
-              <Button {...btnProps} href="https://serene-ravine-80856.herokuapp.com/">
-              visit site
+              <Button {...btnProps} target="_blank" href="https://serene-ravine-80856.herokuapp.com/">
+              visit site &nbsp; <LaunchIcon fontSize="inherit"/>
             </Button>
             </Grid>
             <Grid item>
@@ -186,8 +186,8 @@ export default function Projects() {
             </Typography>
             <Grid container {...justifyEnd} spacing={3}>
               <Grid item> 
-              <Button {...btnProps} href="https://powells-produce.herokuapp.com">
-              visit site
+              <Button {...btnProps} target="_blank" href="https://powells-produce.herokuapp.com">
+              visit site &nbsp; <LaunchIcon fontSize="inherit"/>
             </Button>
             </Grid>
             <Grid item>
@@ -259,8 +259,8 @@ export default function Projects() {
             </Typography>
             <Grid container {...justifyStart} spacing={3}>
               <Grid item> 
-              <Button {...btnProps} href="https://cellar-stock.herokuapp.com/catalog">
-              Visit Site
+              <Button {...btnProps} target="_blank" href="https://cellar-stock.herokuapp.com/catalog">
+              visit site &nbsp; <LaunchIcon fontSize="inherit"/>
             </Button>
             </Grid>
             <Grid item>

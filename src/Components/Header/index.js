@@ -163,7 +163,7 @@ function Header({openContactForm}) {
               
             >
               {" "}
-              Contact
+              fuck!
             </Button>
           </Hidden>
           <Hidden mdUp>

@@ -59,7 +59,7 @@ export default function About() {
             container
             direction="column"
           >
-            <Fade in={scrollTrigger} timeout={1000}>
+            <Fade in={scrollTrigger} timeout={1200}>
               <Typography ref={textRef} variant="h4">
                 <Box
                   color="primary.dark"
@@ -70,7 +70,7 @@ export default function About() {
                 </Box>
               </Typography>
             </Fade>
-            <Fade in={scrollTrigger} timeout={1000}>
+            <Fade in={scrollTrigger} timeout={1200}>
               <Typography variant="body1">
                 <Box fontFamily="Roboto Slab" align="justify" mr={isXs ? 0 : "20px"}  >
                   I am the best at all the code machineI am the best at all the

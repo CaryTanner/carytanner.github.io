@@ -127,10 +127,11 @@ export default function Contact({ emailOpen, openContactForm }) {
             <Hidden only="sm">
               <Typography variant="subtitle1">
                 <Box
-                  ml={2}
+                  ml={isXs ? 0 : 2}
                   mt={isXs ? 1 : 0}
                   display="block"
                   align={isXs ? "center" : "left"}
+                  
                 >
                   Made by Cary Tanner
                 </Box>
@@ -150,7 +151,7 @@ export default function Contact({ emailOpen, openContactForm }) {
                 color="textPrimary"
                 underline="none"
               >
-                <Box className="linkStyles" display="inline" mr={3}>
+                <Box className="linkStyles" display="inline" mr={isXs ? 2 : 3}>
                   GITHUB
                 </Box>
               </Link>
@@ -159,14 +160,14 @@ export default function Contact({ emailOpen, openContactForm }) {
                 color="textPrimary"
                 underline="none"
               >
-                <Box className="linkStyles" display="inline" mr={3}>
+                <Box className="linkStyles" display="inline" mr={isXs ? 2 : 3}>
                   LINKEDIN
                 </Box>
               </Link>
               <Box
                 className="linkStyles"
                 display="inline"
-                mr={3}
+                mr={isXs ? 2 : 3}
                 onClick={emailOpen}
               >
                 EMAIL
