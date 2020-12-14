@@ -4,7 +4,7 @@ import {
   Dialog,
   DialogTitle,
   DialogContent,
-  DialogContentText,
+  
   DialogActions,
   Button,
   useMediaQuery,

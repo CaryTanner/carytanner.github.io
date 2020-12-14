@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import styles from "./index.module.css";
 import {
-  Container,
+  
   Grid,
   Typography,
   Box,
-  useScrollTrigger,
-  Fade,
   useMediaQuery,
   Collapse,
   IconButton,

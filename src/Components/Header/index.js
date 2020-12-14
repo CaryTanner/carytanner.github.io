@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import {
   Button,
@@ -22,7 +22,7 @@ import CV_Cary_Tanner_Web_Developer from "../../images/CV_Cary_Tanner_Web_Develo
 
 function Header({openContactForm}) {
   const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 200 });
-  const isXs = useMediaQuery((theme) => theme.breakpoints.down("xs"));
+  
 
   //hamburger logic
   const [anchorEl, setAnchorEl] = React.useState(null);

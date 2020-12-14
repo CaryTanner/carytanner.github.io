@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
 import styles from "./index.module.css";
 import {
-  Container,
+  
   Grid,
   Typography,
   Box,
-  Paper,
+  
   Hidden,
   Button,
   useMediaQuery,
-  useScrollTrigger,
+ 
   Fade,
   Link
 } from "@material-ui/core";
-import { sendEmail } from '../../sendEmail'
+
 
 
 export default function Landing({emailOpen, openContactForm}) {

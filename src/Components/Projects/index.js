@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import styles from "./index.module.css";
 import {
-  Container,
+
   Grid,
   Typography,
   Box,
   useMediaQuery,
-  Paper,
+
   Button,
   useScrollTrigger,
 } from "@material-ui/core";
@@ -26,7 +26,7 @@ import herokuLogo from "../../images/herokuLogo.svg";
 import jsLogo from "../../images/jsLogo.svg";
 import materialUiLogo from "../../images/materialUiLogo.svg";
 import mongodbLogo from "../../images/mongodbLogo.svg";
-import nodejsLogo from "../../images/nodejsLogo.svg";
+
 import nodeNodeJsLogo from "../../images/nodeNodeJsLogo.svg";
 import reactLogo from "../../images/reactLogo.svg";
 import reactRouterLogo from "../../images/reactRouterLogo.svg";

@@ -19,7 +19,7 @@ export default function EmailPopover({
   closeEmailPopover,
 }) {
 
-    
+  
     const [openCopiedSnackbar, setOpenCopiedSnackbar] = React.useState(false);
 
 const copyAndOpenSnackbar = () => {

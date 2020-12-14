@@ -1,4 +1,4 @@
-import { StylesProvider } from "@material-ui/core";
+
 import React, {useState, useEffect} from "react";
 import styles from "./index.module.css";
 import {
@@ -10,7 +10,7 @@ import {
   Hidden,
   Link,
   Grow,
-  Fade
+ 
 } from "@material-ui/core";
 import LaunchIcon from "@material-ui/icons/Launch";
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
@@ -19,7 +19,7 @@ import CV_Cary_Tanner_Web_Developer from "../../images/CV_Cary_Tanner_Web_Develo
 export default function Contact({ emailOpen, openContactForm }) {
   const isXs = useMediaQuery((theme) => theme.breakpoints.down("xs"));
   const isSm = useMediaQuery((theme) => theme.breakpoints.down("sm"));
-  const isMd = useMediaQuery((theme) => theme.breakpoints.down("md"));
+  
 
   const textRef = React.createRef();
   const [scrollTrigger, setScrollTrigger] = useState(undefined);
