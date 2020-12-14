@@ -131,7 +131,7 @@ export default function Projects() {
               </Typography>
             </Grid>
             <Typography variant="h4">
-              <Box mb={1} color="primary.dark" letterSpacing={-1}>
+              <Box mb={1} color="primary.dark" letterSpacing={-1} align={isSm ? 'center' : 'left'}>
                 Webshop with Custom Checkout
               </Box>
             </Typography>
@@ -354,7 +354,7 @@ export default function Projects() {
                 mb={1}
                 color="primary.dark"
                 letterSpacing={-2}
-                
+                align={isSm ? 'center' : 'left'}
               >
                 Recipe Search &amp; Grocery Orders
               </Box>
