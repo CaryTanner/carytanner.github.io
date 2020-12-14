@@ -4,7 +4,7 @@ import {
   Dialog,
   DialogTitle,
   DialogContent,
-  
+  Typography,
   DialogActions,
   Button,
   useMediaQuery,
@@ -75,7 +75,9 @@ export default function ContactForm({
           onSubmit={(values) => handleSubmit(values)}
         >
           <Form >
-            <DialogTitle id="form-dialog-title" style={{ marginBottom: "-.5rem" }}>Let's get in touch!</DialogTitle>
+            <DialogTitle id="form-dialog-title" style={{ marginBottom: "-.5rem" }}>
+                <Typography variant="overline">Contact</Typography><br/>
+                Let's get in touch!</DialogTitle>
             <DialogContent>
               
               <Grid container justify="space-between" spacing={2}>
