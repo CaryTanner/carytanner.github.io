@@ -96,7 +96,7 @@ export default function Contact({ emailOpen, openContactForm }) {
                 fontWeight="fontWeightMedium"
                 letterSpacing={-1}
                 align={isXs ? "center" : "left"}
-                ref={textRef}
+                
               >
                 Looking to hire an ambitious web developer?
               </Box>
@@ -214,10 +214,12 @@ export default function Contact({ emailOpen, openContactForm }) {
                   <LaunchIcon fontSize="inherit" /> CV
                 </Box>
               </Link>
+              <span ref={textRef}></span>
             </Typography>
           </Grid>
         </Grid>
-      </Grid>
+        
+      </Grid >
 
       <Box className={styles.triangle}></Box>
     </>

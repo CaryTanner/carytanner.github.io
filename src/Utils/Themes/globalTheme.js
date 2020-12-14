@@ -12,7 +12,7 @@ let globalTheme = createMuiTheme({
     
     },
     secondary: {
-        main: '#ffb7a4', //peach
+        main: '#E3C1FF', //light gray purple
         
     },
     background: {

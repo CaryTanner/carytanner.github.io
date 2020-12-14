@@ -13,6 +13,7 @@ import {
   Fade,
   Link
 } from "@material-ui/core";
+import { sendEmail } from '../../sendEmail'
 
 
 export default function Landing({emailOpen, openContactForm}) {
@@ -23,6 +24,8 @@ export default function Landing({emailOpen, openContactForm}) {
   useEffect(() => {
     return setFadeIn(true);
   }, []);
+
+
 
   return (
     <>
@@ -101,6 +104,7 @@ export default function Landing({emailOpen, openContactForm}) {
         </Grid>
       </Grid>
       <div id="aboutSection"></div>
+      
     </>
   );
 }

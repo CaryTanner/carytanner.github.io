@@ -67,19 +67,27 @@ export default function About() {
                   </Box>
                   <Box {...paraStyles}>
                     While doing sales for a wine importer, I wanted to
-                    modernize our website so I took on the <Box display="inline" fontWeight="fontWeightBold" color="primary.main"> challenge of learning </Box>
-                     web development. My first project was a "Rock, Paper,
+                    modernize our website so I took on the <Box display="inline" fontWeight="fontWeightBold" color="primary.main"> challenge of learning 
+                     web development. </Box>My first project was a "Rock, Paper,
                     Scissors" game that my daughter absolutely
                     loved, asking me "What else can you make?"
                   </Box>
                   <Box {...paraStyles}>
                     Soon, I found myself spending <Box display="inline" fontWeight="fontWeightBold" color="primary.main">all my free time writing code.</Box>
                   </Box>
+
+                  <Box {...paraStyles} > I even enrolled in a <Box display="inline" fontWeight="fontWeightBold" color="primary.main">Frontend Developer Program </Box>with Changemakers Educations. 
+                  </Box>
+
                   <Box {...paraStyles}>
                     At the same time as I expanded our wine import business into
                     5 new cities and more than <Box display="inline" fontWeight="fontWeightBold" color="primary.main">doubled my sales </Box>year on year, I
-                    developed my coding skills with a special focus on React and Node.js.
-                  </Box>
+                    developed my coding skills with a special focus on React and Node.js. </Box>
+                    
+                    
+                    
+
+                  
                   <Box {...paraStyles}> Then Corona came. </Box>
                   <Box {...paraStyles}>
                     Covid-19 has crippled the hospitality industry I love. But I
@@ -90,8 +98,8 @@ export default function About() {
                     Originally from California, I studied Spanish and Portguese
                     at UC Berkeley. After school, I worked for years as an
                     English teacher and translator in Madrid, Spain. Later I
-                    moved to Stockholm, working for many years as a sommelier,
-                    server and, finally, in the wine import trade.
+                    moved to Stockholm, working for many years as a sommelier
+                  and finally in the wine import trade.
                   </Box>
 
                   <Box {...paraStyles}>
@@ -109,9 +117,9 @@ export default function About() {
             </Collapse>
             
           </Grid>
-          <Grid item>
+          <Grid item style={{marginTop: "-1rem"}}>
               <IconButton onClick={handleCollapse} style={{transition: "300ms", transform: isExpanded ? "rotate(180deg)" : null }}>
-                <ExpandMoreIcon />
+                <ExpandMoreIcon fontSize="large"/>
               </IconButton>
             </Grid>
         

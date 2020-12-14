@@ -157,13 +157,13 @@ function Header({openContactForm}) {
           <Hidden smDown>
             <Button
               variant="contained"
-              
+              color="secondary"
               className={styles.rightMenu}
               onClick={openContactForm}
               
             >
-              {" "}
-              fuck!
+              
+              work with me
             </Button>
           </Hidden>
           <Hidden mdUp>
