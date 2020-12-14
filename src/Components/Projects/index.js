@@ -143,7 +143,7 @@ export default function Projects() {
                 with Material UI and CSS modules. Tech:
               </Box>
             </Typography>
-            <Grid container justify="space-between">
+            <Grid container justify="space-between" style={{marginBottom: "8px"}}>
               <Grid item>
                 <img
                   className={styles.logos}
@@ -245,7 +245,7 @@ export default function Projects() {
                 server side rendering. Styling with Bootstrap. Tech:
               </Box>
             </Typography>
-            <Grid container justify="space-between">
+            <Grid container justify="space-between" style={{marginBottom: "8px"}}>
               <Grid item>
                 <img
                   className={styles.logos}
@@ -367,7 +367,7 @@ export default function Projects() {
                 validation. Custom styling with SASS. Tech:
               </Box>
             </Typography>
-            <Grid container justify="space-between">
+            <Grid container justify="space-between" style={{marginBottom: "8px"}}>
               <Grid item>
                 <img
                   className={styles.logos}
