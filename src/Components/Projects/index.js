@@ -136,7 +136,7 @@ export default function Projects() {
               </Box>
             </Typography>
             <Typography variant="body1">
-              <Box mt={1} mb={3} fontFamily="Roboto Slab" align="justify">
+              <Box mt={2} mb={3} fontFamily="Roboto Slab" align="justify">
                 Raining Cats &amp; Dogs is a React App that integrates two REST
                 Api's into a pet webshop. Features include product cards and
                 detail pages, custom checkout flow and client side routing. Styled
@@ -234,7 +234,7 @@ export default function Projects() {
               </Box>
             </Typography>
             <Typography variant="body1">
-              <Box mt={1} mb={4} fontFamily="Roboto Slab" align="justify">
+              <Box mt={2} mb={3} fontFamily="Roboto Slab" align="justify">
                 Cellar Stock organizes the complex inventory of a wine cellar
                 using{" "}
                 <Box display="inline" fontWeight="fontWeightBold">
@@ -360,7 +360,7 @@ export default function Projects() {
               </Box>
             </Typography>
             <Typography variant="body1">
-              <Box mt={1} mb={4} fontFamily="Roboto Slab" align="justify">
+              <Box mt={2} mb={3} fontFamily="Roboto Slab" align="justify">
                 Powell's Produce uses React &amp; the REST Api Spoonacular for
                 recipe search including autocomplete suggestions. Features
                 include ordering directly from ingredient lists and Formik form
