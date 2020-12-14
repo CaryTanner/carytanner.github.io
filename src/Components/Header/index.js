@@ -40,7 +40,7 @@ function Header({openContactForm}) {
     border: 4,
     p: 0.5,
     fontFamily: "roboto mono, monospace",
-    lineHeight: 0.8,
+    lineHeight: .82,
     letterSpacing: -2,
     fontWeight: "fontWeightBold",
     fontSize: "30px",

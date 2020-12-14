@@ -179,13 +179,7 @@ export default function Projects() {
                   alt="Git Logo"
                 ></img>
               </Grid>
-              <Grid item>
-                <img
-                  className={styles.logos}
-                  src={herokuLogo}
-                  alt="Heroku Logo"
-                ></img>
-              </Grid>
+              
             </Grid>
             <Grid container {...justifyStart} spacing={3}>
               <Grid item>
@@ -289,13 +283,7 @@ export default function Projects() {
                   alt="Bootstrap Logo"
                 ></img>
               </Grid>
-              <Grid item>
-                <img
-                  className={styles.logos}
-                  src={mongoose}
-                  alt="Mongoose Js logo"
-                ></img>
-              </Grid>
+              
             </Grid>
             <Grid container {...justifyEnd} spacing={3}>
               <Grid item>
@@ -416,13 +404,7 @@ export default function Projects() {
                   alt="Git Logo"
                 ></img>
               </Grid>
-              <Grid item>
-                <img
-                  className={styles.logos}
-                  src={githubLogo}
-                  alt="GitHub Logo"
-                ></img>
-              </Grid>
+              
             </Grid>
             <Grid container {...justifyStart} spacing={3}>
               <Grid item>
