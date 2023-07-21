@@ -1,28 +1,14 @@
-import React from "react";
+import React from 'react';
 
-import {
-  Button,
-  Typography,
-  Box,
-  useScrollTrigger,
-  Grid,
-  useMediaQuery,
-  Hidden,
-  Fab,
-  Grow,
-  Menu,
-  MenuItem,
-  Link,
-} from "@material-ui/core";
+import { Button, Typography, Box, useScrollTrigger, Grid, Hidden, Fab, Grow, Menu, MenuItem, Link } from '@material-ui/core';
 
-import MenuIcon from "@material-ui/icons/Menu";
-import styles from "./index.module.css";
-import LaunchIcon from "@material-ui/icons/Launch";
-import CV_Cary_Tanner_Web_Developer from "../../images/CV_Cary_Tanner_Web_Developer.pdf";
+import MenuIcon from '@material-ui/icons/Menu';
+import styles from './index.module.css';
+import LaunchIcon from '@material-ui/icons/Launch';
+import CV_Cary_Tanner_Web_Developer from '../../images/CV_Cary_Tanner_Web_Developer.pdf';
 
-function Header({openContactForm}) {
+function Header({ openContactForm }) {
   const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 200 });
-  
 
   //hamburger logic
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -39,19 +25,19 @@ function Header({openContactForm}) {
   const logoProps = {
     border: 4,
     p: 0.5,
-    fontFamily: "roboto mono, monospace",
-    lineHeight: .82,
+    fontFamily: 'roboto mono, monospace',
+    lineHeight: 0.82,
     letterSpacing: -2,
-    fontWeight: "fontWeightBold",
-    fontSize: "30px",
+    fontWeight: 'fontWeightBold',
+    fontSize: '30px'
   };
 
   const boxStyles = {
-    color: "palette.text.primary",
-    fontWeight: "fontWeightMedium",
+    color: 'palette.text.primary',
+    fontWeight: 'fontWeightMedium',
     lineHeight: 0.8,
 
-    display: "inline",
+    display: 'inline'
   };
 
   // link scroll
@@ -59,86 +45,47 @@ function Header({openContactForm}) {
   const smoothScroll = (event) => {
     event.preventDefault();
     const offset = 100;
-    const id = event.currentTarget.getAttribute("href").slice(1);
+    const id = event.currentTarget.getAttribute('href').slice(1);
     const anchor = document.getElementById(id);
     const offsetTop = anchor.getBoundingClientRect().top + window.pageYOffset;
     window.scroll({
       top: offsetTop - offset,
-      behavior: "smooth",
+      behavior: 'smooth'
     });
   };
 
   return (
     <>
       <Box {...logoProps} className={styles.logo}>
-        TAN{" "}
-        <Box style={{ transform: "rotate(180deg) translateX(-2px)" }}>NER</Box>
+        TAN <Box style={{ transform: 'rotate(180deg) translateX(-2px)' }}>NER</Box>
       </Box>
 
-      <Grid style={{ padding: "2rem 0 0 0" }} container className={styles.nav}>
-        <Grid
-          item
-          xs={12}
-          sm={6}
-          container
-          direction="column"
-          justify="center"
-          alignItems="flex-end"
-        >
+      <Grid style={{ padding: '2rem 0 0 0' }} container className={styles.nav}>
+        <Grid item xs={12} sm={6} container direction="column" justify="center" alignItems="flex-end">
           <Hidden smDown>
-            <Grid
-              item
-              sm={9}
-              md={8}
-              className={styles.landingTextBox}
-              container
-              justify="space-between"
-            >
+            <Grid item sm={9} md={8} className={styles.landingTextBox} container justify="space-between">
               <Typography variant="body1">
-                <Box
-                  fontWeight="fontWeightBold"
-                  lineHeight={0.8}
-                  display="inline"
-                  className="linkStyles"
-                >
+                <Box fontWeight="fontWeightBold" lineHeight={0.8} display="inline" className="linkStyles">
                   START
                 </Box>
               </Typography>
               <Typography variant="body1">
                 <Box {...boxStyles}>
-                  <Link
-                    className="linkStyles"
-                    color="textPrimary"
-                    underline="none"
-                    href="#aboutSection"
-                    onClick={smoothScroll}
-                  >
+                  <Link className="linkStyles" color="textPrimary" underline="none" href="#aboutSection" onClick={smoothScroll}>
                     ABOUT
                   </Link>
                 </Box>
               </Typography>
               <Typography variant="body1">
                 <Box {...boxStyles}>
-                  <Link
-                    className="linkStyles"
-                    color="textPrimary"
-                    underline="none"
-                    href="#projectsSection"
-                    onClick={smoothScroll}
-                  >
+                  <Link className="linkStyles" color="textPrimary" underline="none" href="#projectsSection" onClick={smoothScroll}>
                     PROJECTS
                   </Link>
                 </Box>
               </Typography>
               <Typography variant="body1">
                 <Box {...boxStyles} mr={2}>
-                  <Link
-                    className="linkStyles"
-                    target="_blank"
-                    color="textPrimary"
-                    underline="none"
-                    href={CV_Cary_Tanner_Web_Developer}
-                  >
+                  <Link className="linkStyles" target="_blank" color="textPrimary" underline="none" href={CV_Cary_Tanner_Web_Developer}>
                     <LaunchIcon fontSize="inherit" /> CV
                   </Link>
                 </Box>
@@ -146,23 +93,14 @@ function Header({openContactForm}) {
             </Grid>
           </Hidden>
         </Grid>
-        <Grid
-          item
-          sm={6}
-          xs={11}
-          container
-          justify="flex-end"
-          alignItems="flex-start"
-        >
+        <Grid item sm={6} xs={11} container justify="flex-end" alignItems="flex-start">
           <Hidden smDown>
             <Button
               variant="contained"
               color="secondary"
               className={styles.rightMenu}
-              onClick={openContactForm}
-              
+              href={`mailto:cary.landon@gmail.com?subject=Interested in hiring a web developer`}
             >
-              
               work with me
             </Button>
           </Hidden>
@@ -179,50 +117,24 @@ function Header({openContactForm}) {
           <MenuIcon />
         </Fab>
       </Grow>
-      <Menu
-        id="simple-menu"
-        anchorEl={anchorEl}
-        keepMounted
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-      >
+      <Menu id="simple-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
         <MenuItem onClick={handleClose}>
-          <Link
-            color="textPrimary"
-            underline="none"
-            onClick={smoothScroll}
-            href="#startSection"
-          >
+          <Link color="textPrimary" underline="none" onClick={smoothScroll} href="#startSection">
             Start
           </Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <Link
-            color="textPrimary"
-            underline="none"
-            href="#aboutSection"
-            onClick={smoothScroll}
-          >
+          <Link color="textPrimary" underline="none" href="#aboutSection" onClick={smoothScroll}>
             About
           </Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <Link
-            color="textPrimary"
-            underline="none"
-            href="#projectsSection"
-            onClick={smoothScroll}
-          >
+          <Link color="textPrimary" underline="none" href="#projectsSection" onClick={smoothScroll}>
             Projects
           </Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <Link
-            target="_blank"
-            color="textPrimary"
-            underline="none"
-            href={CV_Cary_Tanner_Web_Developer}
-          >
+          <Link target="_blank" color="textPrimary" underline="none" href={CV_Cary_Tanner_Web_Developer}>
             <LaunchIcon fontSize="inherit" /> CV
           </Link>
         </MenuItem>
