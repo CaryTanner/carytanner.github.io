@@ -1,41 +1,41 @@
+.contactContainer {
+  margin: 10vw 0 -29vw 0;
 
-.contactContainer{
-    margin: 10vw 0 -29vw 0 ;
-    
-    min-height: 300px;
-    max-width: 1920px;
-  
+  min-height: 300px;
+  max-width: 1920px;
+
 }
 
 .triangle {
-    
+
+  width: 0;
+
+  position: absolute;
+
+  z-index: -1;
+  height: 0;
+
+  border-left: 50vw solid white;
+  border-right: 50vw solid white;
+  border-bottom: 32vw solid rgba(212, 161, 255, 18%);
+
+}
+
+@media (min-width: 1920px) {
+
+  .triangle {
+
     width: 0;
-   
-   position: absolute;
-   
-    z-index: -1;
+
     height: 0;
-    
-    border-left: 50vw solid white;
-    border-right: 50vw solid white;
-    border-bottom: 32vw solid rgba(212, 161, 255, 18%);
-    
+    border-bottom: 500px solid rgba(212, 161, 255, 18%);
+    border-left: 960px solid white;
+    border-right: 960px solid white;
+    /* border-bottom: 250px solid rgba(212, 161, 255, 18%); */
+
   }
-  
-  @media (min-width: 1920px){
-  
-    .triangle {
-     
-      width: 0;
-      
-      height: 0;
-      border-bottom: 500px solid rgba(212, 161, 255, 18%);
-      border-left: 960px solid white;
-      border-right: 960px solid white;
-      /* border-bottom: 250px solid rgba(212, 161, 255, 18%); */
-      
-    }
-    .contactContainer{
-        margin-bottom: -475px;
-    }
+
+  .contactContainer {
+    margin-bottom: -475px;
+  }
 }

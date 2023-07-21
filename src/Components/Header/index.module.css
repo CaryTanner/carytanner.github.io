@@ -1,45 +1,44 @@
+@media (max-width: 600px) {
 
-  @media (max-width: 600px){
-    
-    
-    .landingTextBox {
-    
-        max-width: 298px !important;
-        
-      }
-    }
 
-  .logo{
-      position: absolute;
-      top: 1rem;
-      left: 2rem;
+  .landingTextBox {
+
+    max-width: 298px !important;
+
   }
-
-  @media(max-width: 600px){
-    .logo{
-        top: 1.5rem;
-        left: 2rem;
-        
-        
-    }
-} 
-
-
-
-.rightMenu{
-    margin-right: 2rem !important;
 }
 
-  .fab{
-    position: fixed !important;
-    top: 2rem;
-    right: 2rem;
-    z-index: 1000 !important;
+.logo {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
 }
 
-.nav{
-    position: absolute !important;
-    top: 0;
-    max-width: 1920px !important;
-    overflow-x: hidden !important;
+@media(max-width: 600px) {
+  .logo {
+    top: 1.5rem;
+    left: 2rem;
+
+
+  }
+}
+
+
+
+.rightMenu {
+  margin-right: 2rem !important;
+}
+
+.fab {
+  position: fixed !important;
+  top: 2rem;
+  right: 2rem;
+  z-index: 1000 !important;
+}
+
+.nav {
+  position: absolute !important;
+  top: 0;
+  max-width: 1920px !important;
+  overflow-x: hidden !important;
 }

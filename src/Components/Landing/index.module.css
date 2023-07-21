@@ -1,13 +1,11 @@
 /* this is 800px to 1000px */
 .container {
   height: 697px;
-  
-
   background-image: url("../../images/cut1001.svg");
   background-repeat: no-repeat;
 
   background-position-x: calc(506 / 1001 * 100%);
- 
+
 }
 
 
@@ -18,16 +16,16 @@
 
     background-image: url("../../images/mobileCode_4.svg");
     background-repeat: no-repeat;
-   background-size: cover;
-   background-position-x: calc(268 / 536 * 100%);
+    background-size: cover;
+    background-position-x: calc(268 / 536 * 100%);
   }
 
   .landingTextBox {
-    
+
     max-width: 298px !important;
-    
+
   }
-  
+
 
 
 }
@@ -35,21 +33,21 @@
 @media (min-width: 600px) and (max-width: 800px) {
   .container {
     height: 623px;
-   
+
 
     background-image: url("../../images/cut850.svg");
     background-repeat: no-repeat;
-background-position-x: calc(430 / 852 * 100%); 
-   
+    background-position-x: calc(430 / 852 * 100%);
+
   }
 
-  
+
 }
 
 @media (min-width: 1001px) and (max-width: 1279px) {
   .container {
     height: 839px;
-    
+
 
     background-image: url("../../images/cut1280_2.svg");
     background-repeat: no-repeat;
@@ -57,13 +55,13 @@ background-position-x: calc(430 / 852 * 100%);
     background-position-x: calc(648 / 1282 * 100%);
   }
 
-  
+
 }
 
 @media (min-width: 1280px) and (max-width: 1650px) {
   .container {
     height: 1020px;
-    
+
 
     background-image: url("../../images/cut1650_3_3.svg");
     background-repeat: no-repeat;
@@ -71,7 +69,7 @@ background-position-x: calc(430 / 852 * 100%);
     background-position-x: calc(834 / 1652 * 100%);
   }
 
- 
+
 }
 
 @media (min-width: 1650px) {
@@ -84,5 +82,5 @@ background-position-x: calc(430 / 852 * 100%);
     background-position-x: calc(963 / 1938 * 100%);
   }
 
-  
+
 }
